@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ClassComponent from "./ClassComponent.js"
-import App from "./App";
+import FunctionalComponent from "./FunctionalComponent";
 
 ReactDOM.render(<>
-<App />,
+<FunctionalComponent />,
 <ClassComponent />
 </>, document.getElementById("root"));
