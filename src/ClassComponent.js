@@ -6,7 +6,7 @@ export default class ClassComponent extends React.Component {
     this.state = {
       counter: 0,
     };
-    this.handlerClick = this.handlerClick.bind(this);
+    // this.handlerClick = this.handlerClick.bind(this);
   }
 
   handlerClick() {
@@ -15,11 +15,17 @@ export default class ClassComponent extends React.Component {
     }));
   }
 
+  // handlerClick = () => {
+  //   this.setState((prevState) => ({
+  //     counter: prevState.counter + 1,
+  //   }));
+  // }
+
   render() {
     return (
       <>
         <br />
-        <button onClick={this.handlerClick}>
+        <button onClick={this.handlerClick.bind(this)}>
           Классовый компонент нажали {this.state.counter} раз
         </button>
       </>
